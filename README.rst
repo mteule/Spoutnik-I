@@ -3,6 +3,8 @@ Spoutnik-I
 
 Script to retrieve selected satellite metered data from a netcdf file 
 
+A large list of "Interfaces to Standard Formats" can be found on [wiki.python]. 
+More info may be found from [Brest] that sent us there.
 
 netCDF4 installation:
 =====================
@@ -117,6 +119,8 @@ References:
 [netCDF4-PiPy] https://pypi.python.org/pypi/netCDF4/1.0.7
 
                https://pypi.python.org/pypi/netCDF4/0.8.2
+               
+https://code.google.com/p/netcdf4-python/downloads/detail?name=netCDF4-1.0.7.tar.gz&can=2&q=
 
 [Stack_ex_1] https://stackoverflow.com/questions/16641437/importing-variables-from-netcdf-into-python
 
@@ -125,3 +129,30 @@ References:
 [Anaconda-fr] http://python-prepa.github.io/preparation.html
 
 [netCDF4 install issue] https://code.google.com/p/netcdf4-python/issues/detail?id=63
+
+[wiki.python] https://wiki.python.org/moin/NumericAndScientific/Formats
+
+[Brest] https://www-iuem.univ-brest.fr/feiri/calcul-scientifique/wiki/python-pour-loceanographie
+        https://www-iuem.univ-brest.fr/feiri/calcul-scientifique/wiki/travailler-avec-le-format-netcdf
+
+#################
+More usefull links to read:
+
+https://www.google.fr/#q=numpy+python
+http://www.labri.fr/perso/renault/working/teaching/algonum/sheet.php
+http://docs.scipy.org/doc/numpy/reference/
+http://docs.scipy.org/doc/numpy/reference/arrays.html
+http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#array-attributes
+
+
+https://www.google.fr/#q=python+netcdf+4+example&start=10
+https://stackoverflow.com/questions/14035148/import-netcdf-file-to-pandas-dataframe
+http://www.esr.org/~chjiang/python.html
+http://www-pord.ucsd.edu/~cjiang/python.html
+http://www.unidata.ucar.edu/software/netcdf/examples/programs/
+[Python_Plotting_Example] http://precip.aos.wisc.edu/~wiki/index.php/Python_Plotting_Example_using_NETCDF
+
+https://www.google.fr/#q=netcdf4+python+point&spell=1
+[La Solution!] http://nbviewer.ipython.org/gist/rsignell-usgs/4740419
+[L'explication] http://nbviewer.ipython.org/github/Unidata/tds-python-workshop/blob/master/reading_netCDF.ipynb
+...to be finished...
