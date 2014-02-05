@@ -31,7 +31,7 @@ Usefull documentation about the netcdf format can be found at the demo page [net
 It seems it's included in a python scientific suite [Anaconda] that may be easily installed.
 More easily on Centos/Fedora. But can probably be installed on a Ubuntu [Anaconda-fr].
 
-Anyway we would have to upgrade the netCDF4 package, since it is said in [netCDF4-module] that the Anaconda version, 1.06, has a bug that is fixed in 1.07 to be compatible with ubuntu 12.04.
+Anyway we would have to upgrade the netCDF4 package, since it is said in [netCDF4-module] that the Anaconda version [Anaconda], 1.06, has a bug that is fixed in 1.07 to be compatible with ubuntu 12.04.
 
 We'll then first try to install only the last version of netCDF4 (1.0.7), and if it doesn't work we may need a Scientific Linux Station, not to get into too much troubles.
 
@@ -89,17 +89,17 @@ We only needed the "libhdf5-serial-dev" package.
 Install problem 2: libnetcdf-dev
 --------------------------------
 
-NETCDF4_DIR environment variable not set, checking standard locations.. 
+    NETCDF4_DIR environment variable not set, checking standard locations.. 
 
 Install problem 3: python-dev
 -----------------------------
-netCDF4.c:16:20: fatal error: Python.h: No such file or directory
-compilation terminated.
-error: command 'gcc' failed with exit status 1
+    netCDF4.c:16:20: fatal error: Python.h: No such file or directory
+    compilation terminated.
+    error: command 'gcc' failed with exit status 1
 
 Checking the install:
 ---------------------
-    /netCDF4-1.0.7 $$ cd test ; python run_all.py 
+    /netCDF4-1.0.7 $ cd test ; python run_all.py 
 
 It sends us only one warning.
 
@@ -117,6 +117,7 @@ References:
 [netCDF4-demo] http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html
 
 [netCDF4-PiPy] https://pypi.python.org/pypi/netCDF4/1.0.7
+
                https://pypi.python.org/pypi/netCDF4/0.8.2
 
 [Stack_ex_1] https://stackoverflow.com/questions/16641437/importing-variables-from-netcdf-into-python
