@@ -7,6 +7,7 @@ Script to retrieve selected satellite metered data from a netcdf file
 netCDF4 installation:
 =====================
 
+We finally choosed to install netCDF4 from the project page with the setup.py script.
 
 python-netcdf:
 --------------
@@ -20,17 +21,14 @@ First looking for the tools included in ubuntu 12.04:
 
 The python package "python-netcdf" from the distribution isn't the one imported in the demo with "import netCDF4".
 We don't really know how to use it. 
-
 Anyway, every google search about working with python and netcdf sends us to using "import netCDF4" 
 
 netCDF4:
 --------
 Lots of information about netCDF4 can be accessed from [netCDF4-PiPy].
-
 Usefull documentation about the netcdf format can be found at the demo page [netCDF4-demo]
 It seems it's included in a python scientific suite [Anaconda] that may be easily installed.
 More easily on Centos/Fedora. But can probably be installed on a Ubuntu [Anaconda-fr].
-
 Anyway we would have to upgrade the netCDF4 package, since it is said in [netCDF4-module] that the Anaconda version [Anaconda], 1.06, has a bug that is fixed in 1.07 to be compatible with ubuntu 12.04.
 
 We'll then first try to install only the last version of netCDF4 (1.0.7), and if it doesn't work we may need a Scientific Linux Station, not to get into too much troubles.
@@ -52,7 +50,7 @@ Install problem 1:
 
 First the problem with HDF5, needed the "-dev" package:
 
-    genevieve@genevieve-Studio-1535 ~/Téléchargements/netCDF4-1.0.7 $ python setup.py install
+    /netCDF4-1.0.7 $ python setup.py install
 
     HDF5_DIR environment variable not set, checking some standard locations ..
 
