@@ -155,7 +155,8 @@ print time[0], time.units
 
 
 ####### How to get the good time format #######
-# [Solution]:
+
+
 times = time
 jd = netCDF4.num2date(times[:],times.units)
 jd
@@ -167,8 +168,10 @@ type(ncfile.variables[u'latitude'][:])
 #############################################################################
 # Trying to have the point indexes:
 
-
 # http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html
+# Not better: http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html
+
+# [Solution]: http://nbviewer.ipython.org/gist/rsignell-usgs/4740419
 # Inspired from the above, but much simpler.
 lat_values = (ncfile.variables[u'latitude'][:]).copy()
 lat_pt = 48.29793167114258
@@ -186,7 +189,17 @@ def index(pt, ndarray):
     index = dist_sq.argmin()
     return index
 
+##############################################################################
+##############################################################################
+##############################################################################
+##############################################################################
+# This part works by itself:
 
+import netCDF4
+from netCDF4 import Dataset
+
+# Load the file:
+ncfile = Dataset('../Spoutnik-I files/PREVIMER_WW3-FINIS-200M_20140123T13Z.nc','r')
 
 point_indexes = dict({'lat':0,'lon':0})
 point = dict({'lat':48.29793167114258,'lon':-4.976805686950684})
@@ -195,11 +208,12 @@ point_indexes['lat'] = index(point['lat'], ncfile.variables[u'latitude'][:])
 point_indexes['lon'] = index(point['lon'], ncfile.variables[u'longitude'][:])
 point_indexes
 
+times = ncfile.variables['time']
+jd = netCDF4.num2date(times[:],times.units)
+
 # for that point, retrieve the values for the variable list:
 var_list = list(['hs','hs0','hs1','dir','th0','th1','tp0','tp1','tp2'])
 
-times = ncfile.variables['time']
-jd = netCDF4.num2date(times[:],times.units)
 print jd
 
 print "point: ", point
@@ -212,12 +226,3 @@ for i in var_list:
 
 
 
-# Optionnal:
-####### Get the dimension objects #######
-time = ncfile.variables[u'time']
-latitude = ncfile.variables[u'latitude']
-longitude = ncfile.variables[u'longitude']
-
-print time
-print latitude
-print longitude
