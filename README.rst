@@ -109,8 +109,8 @@ netCDF4 tutorials:
 ==================
 [netCDF4-demo] and [Stack_ex_1] shows us examples on how to use the module.
 
-References:
-===========
+References install:
+===================
 
 [netCDF4-module] https://code.google.com/p/netcdf4-python/
 
@@ -122,8 +122,6 @@ References:
                
 https://code.google.com/p/netcdf4-python/downloads/detail?name=netCDF4-1.0.7.tar.gz&can=2&q=
 
-[Stack_ex_1] https://stackoverflow.com/questions/16641437/importing-variables-from-netcdf-into-python
-
 [Anaconda] http://docs.continuum.io/anaconda/pkgs.html
 
 [Anaconda-fr] http://python-prepa.github.io/preparation.html
@@ -132,8 +130,16 @@ https://code.google.com/p/netcdf4-python/downloads/detail?name=netCDF4-1.0.7.tar
 
 [wiki.python] https://wiki.python.org/moin/NumericAndScientific/Formats
 
+
+References netCDF4 tutorials:
+=============================
+
 [Brest] https://www-iuem.univ-brest.fr/feiri/calcul-scientifique/wiki/python-pour-loceanographie
         https://www-iuem.univ-brest.fr/feiri/calcul-scientifique/wiki/travailler-avec-le-format-netcdf
+
+[Stack_ex_1] https://stackoverflow.com/questions/16641437/importing-variables-from-netcdf-into-python
+
+[Stack_ex_2]https://stackoverflow.com/questions/14035148/import-netcdf-file-to-pandas-dataframe
 
 #################
 More usefull links to read:
