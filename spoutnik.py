@@ -7,8 +7,10 @@
 import netCDF4
 from netCDF4 import Dataset
 
+file_url = '../Spoutnik-I files/PREVIMER_WW3-FINIS-200M_20140123T13Z.nc'
+
 # Load the file:
-ncfile = Dataset('../Spoutnik-I files/PREVIMER_WW3-FINIS-200M_20140123T13Z.nc','r')
+ncfile = Dataset(file_url,'r')
 
 point_indexes = dict({'lat':0,'lon':0})
 point = dict({'lat':48.29793167114258,'lon':-4.976805686950684})
