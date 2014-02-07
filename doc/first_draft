@@ -204,6 +204,13 @@ ncfile = Dataset('../Spoutnik-I files/PREVIMER_WW3-FINIS-200M_20140123T13Z.nc','
 point_indexes = dict({'lat':0,'lon':0})
 point = dict({'lat':48.29793167114258,'lon':-4.976805686950684})
 
+# Copy of the above function:
+def index(pt, ndarray):
+    ndarray_cp = ndarray.copy()
+    dist_sq = (ndarray_cp - pt)**2
+    index = dist_sq.argmin()
+    return index
+
 point_indexes['lat'] = index(point['lat'], ncfile.variables[u'latitude'][:])
 point_indexes['lon'] = index(point['lon'], ncfile.variables[u'longitude'][:])
 point_indexes
