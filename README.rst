@@ -1,3 +1,4 @@
+
 Spoutnik-I
 ==========
 
@@ -27,6 +28,7 @@ Anyway, every google search about working with python and netcdf sends us to usi
 
 netCDF4:
 --------
+
 Lots of information about netCDF4 can be accessed from [netCDF4-PiPy].
 Usefull documentation about the netcdf format can be found at the demo page [netCDF4-demo]
 It seems it's included in a python scientific suite [Anaconda] that may be easily installed.
@@ -107,6 +109,7 @@ It sends us only one warning.
 
 netCDF4 tutorials:
 ==================
+
 [netCDF4-demo] and [Stack_ex_1] shows us examples on how to use the module.
 
 References install:
@@ -141,24 +144,40 @@ References netCDF4 tutorials:
 
 [Stack_ex_2]https://stackoverflow.com/questions/14035148/import-netcdf-file-to-pandas-dataframe
 
-#################
+
 More usefull links to read:
+===========================
 
 https://www.google.fr/#q=numpy+python
-http://www.labri.fr/perso/renault/working/teaching/algonum/sheet.php
-http://docs.scipy.org/doc/numpy/reference/
-http://docs.scipy.org/doc/numpy/reference/arrays.html
-http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#array-attributes
+
+    http://www.labri.fr/perso/renault/working/teaching/algonum/sheet.php
+
+    http://docs.scipy.org/doc/numpy/reference/
+
+    http://docs.scipy.org/doc/numpy/reference/arrays.html
+
+    http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#array-attributes
 
 
 https://www.google.fr/#q=python+netcdf+4+example&start=10
-https://stackoverflow.com/questions/14035148/import-netcdf-file-to-pandas-dataframe
-http://www.esr.org/~chjiang/python.html
-http://www-pord.ucsd.edu/~cjiang/python.html
-http://www.unidata.ucar.edu/software/netcdf/examples/programs/
-[Python_Plotting_Example] http://precip.aos.wisc.edu/~wiki/index.php/Python_Plotting_Example_using_NETCDF
+
+    https://stackoverflow.com/questions/14035148/import-netcdf-file-to-pandas-dataframe
+
+    http://www.esr.org/~chjiang/python.html
+
+    http://www-pord.ucsd.edu/~cjiang/python.html
+
+    http://www.unidata.ucar.edu/software/netcdf/examples/programs/
+
+    [Python_Plotting_Example] http://precip.aos.wisc.edu/~wiki/index.php/Python_Plotting_Example_using_NETCDF
 
 https://www.google.fr/#q=netcdf4+python+point&spell=1
-[La Solution!] http://nbviewer.ipython.org/gist/rsignell-usgs/4740419
-[L'explication] http://nbviewer.ipython.org/github/Unidata/tds-python-workshop/blob/master/reading_netCDF.ipynb
-...to be finished...
+
+    [La Solution!] http://nbviewer.ipython.org/gist/rsignell-usgs/4740419
+
+    [L'explication] http://nbviewer.ipython.org/github/Unidata/tds-python-workshop/blob/master/reading_netCDF.ipynb
+
+    ...to be finished...
+
+
+
