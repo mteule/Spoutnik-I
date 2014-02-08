@@ -10,6 +10,7 @@ from netCDF4 import Dataset
 
 class Spoutnik(object):
 
+    ncfile_url = None
     ncfile = None
     point = dict({'lat': 48.29793167114258, 'lon': -4.976805686950684})
     point_indexes = dict({'lat': 0, 'lon': 0})
@@ -19,10 +20,16 @@ class Spoutnik(object):
 
     def __init__(self, file_url=
         '../Spoutnik-I files/PREVIMER_WW3-FINIS-200M_20140123T13Z.nc'):
+
+        self.ncfile_url = file_url
+        self.__load_ncfile()
+        pass
+
+    def __load_ncfile(self):
         """
         Load the netcdf file
         """
-        self.ncfile = Dataset(file_url, 'r')
+        self.ncfile = Dataset(self.file_url, 'r')
         pass
 
     def __refresh_index(self, pt, ndarray):
