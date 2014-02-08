@@ -6,10 +6,20 @@
 # Usefull documentation to create excell files can be found at the
 # official homepage:
 # http://xlsxwriter.readthedocs.org/tutorial01.html
+# sudo pip install XlsxWriter
 
 import xlsxwriter
+import spoutnik
 
 # Create a workbook and add a worksheet.
 workbook = xlsxwriter.Workbook('output_01.xlsx')
-worksheet = workbook.add_worksheet()
+
+sp = spoutnik.Spoutnik()
+sp.refresh_indexes()
+sp.refresh_var_values()
+sp.print_attr()
+
+worksheet_name = sp.ncfile_url + 'date'  # filename <= 31 char
+
+worksheet = workbook.add_worksheet('worksheet_name')
 
