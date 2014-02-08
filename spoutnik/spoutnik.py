@@ -19,7 +19,7 @@ class Spoutnik(object):
     var_values = list()
 
     def __init__(self, file_url=
-        '../Spoutnik-I files/PREVIMER_WW3-FINIS-200M_20140123T13Z.nc'):
+        '../../Spoutnik-I files/PREVIMER_WW3-FINIS-200M_20140123T13Z.nc'):
 
         self.ncfile_url = file_url
         self.__load_ncfile()
@@ -29,7 +29,7 @@ class Spoutnik(object):
         """
         Load the netcdf file
         """
-        self.ncfile = Dataset(self.file_url, 'r')
+        self.ncfile = Dataset(self.ncfile_url, 'r')
         pass
 
     def __refresh_index(self, pt, ndarray):
