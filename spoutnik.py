@@ -68,6 +68,11 @@ class Spoutnik(object):
         times = self.ncfile.variables['time']
         jd = netCDF4.num2date(times[:], times.units)
 
+        print "\n======= selected variable's values for a GPS point ======="
+
+        # print File data:
+        print "ncfile_url: ", self.ncfile_url
+
         # print Dimensions:
         print "date: ", jd
         print "point: ", self.point
