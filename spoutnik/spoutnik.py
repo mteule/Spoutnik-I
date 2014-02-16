@@ -17,12 +17,43 @@ class Spoutnik(object):
     var_list = \
         list(['hs', 'hs0', 'hs1', 'dir', 'th0', 'th1', 'tp0', 'tp1', 'tp2'])
     var_values = list()
+    dim_values = list()
 
     def __init__(self, file_url=
         '../../Spoutnik-I files/PREVIMER_WW3-FINIS-200M_20140123T13Z.nc'):
-
         self.ncfile_url = file_url
+        pass
+
+    def refresh(self):
         self.__load_ncfile()
+        self.refresh_indexes()
+        self.refresh_var_values()
+        self.refresh_dim_values()
+        self.values = self.dim_values + self.var_values
+
+    def refresh_dim_values(self):
+        del(self.dim_values[:])
+        self.dim_values[0:2] = ""
+        dim = {}
+        # date
+        dim['name'] = u'date'
+        dim['units'] = ""
+        times = self.ncfile.variables['time']
+        jd = netCDF4.num2date(times[:], times.units)
+        dim['value'] = jd
+        self.dim_values.append(dim.copy())  # append() do not copy
+        # u'latitude'
+        dim['name'] = u'latitude'
+        dim['units'] = self.ncfile.variables['latitude'].units
+        dim['value'] = self.ncfile.variables[
+                'latitude'][self.point_indexes['lat']]
+        self.dim_values.append(dim.copy())
+        # u'longitude'
+        dim['name'] = u'longitude'
+        dim['units'] = self.ncfile.variables['longitude'].units
+        dim['value'] = self.ncfile.variables[
+                'longitude'][self.point_indexes['lon']]
+        self.dim_values.append(dim.copy())
         pass
 
     def __load_ncfile(self):
@@ -42,6 +73,9 @@ class Spoutnik(object):
         return index
 
     def refresh_indexes(self):
+        """
+        Use the point{} values to refresh the point_indexes{} values
+        """
         # Latitude
         self.point_indexes['lat'] = self.__refresh_index(
             self.point['lat'], self.ncfile.variables[u'latitude'][:])
@@ -51,6 +85,10 @@ class Spoutnik(object):
         pass
 
     def refresh_var_values(self):
+        """
+        for all the elements of var_list[], refresh the var_values[]
+        copying values for the given point_indexes{}
+        """
         del(self.var_values[:])
         for i in self.var_list:
             var_value = dict({'name': "", 'value': 0, 'units': ""})
@@ -80,7 +118,8 @@ class Spoutnik(object):
         print ""
 
         # print Variables:
-        for i in self.var_values:
+
+        for i in self.values:
             print ("  " +
                 i['name'] +
                 ":\t" +
@@ -94,8 +133,8 @@ class Spoutnik(object):
 
 if __name__ == "__main__":
     sp = Spoutnik()
-    sp.refresh_indexes()
-    sp.refresh_var_values()
+    sp.refresh()
     sp.print_attr()
+
 
 
