@@ -20,10 +20,13 @@ class Spoutnik(object):
 
     def __init__(self, file_url=
         '../../Spoutnik-I files/PREVIMER_WW3-FINIS-200M_20140123T13Z.nc'):
-
         self.ncfile_url = file_url
-        self.__load_ncfile()
         pass
+
+    def refresh(self):
+        self.__load_ncfile()
+        self.refresh_indexes()
+        self.refresh_var_values()
 
     def __load_ncfile(self):
         """
@@ -94,8 +97,8 @@ class Spoutnik(object):
 
 if __name__ == "__main__":
     sp = Spoutnik()
-    sp.refresh_indexes()
-    sp.refresh_var_values()
+    sp.refresh()
     sp.print_attr()
+
 
 
